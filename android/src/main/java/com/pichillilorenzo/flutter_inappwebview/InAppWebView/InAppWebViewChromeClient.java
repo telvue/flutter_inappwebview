@@ -115,11 +115,7 @@ public class InAppWebViewChromeClient extends WebChromeClient implements PluginR
 
   @Override
   public Bitmap getDefaultVideoPoster() {
-    if (mCustomView == null) {
-      return null;
-    }
-    Activity activity = inAppBrowserActivity != null ? inAppBrowserActivity : Shared.activity;
-    return BitmapFactory.decodeResource(activity.getApplicationContext().getResources(), 2130837573);
+    return Bitmap.createBitmap(10, 10, Bitmap.Config.ARGB_8888);
   }
 
   @Override
